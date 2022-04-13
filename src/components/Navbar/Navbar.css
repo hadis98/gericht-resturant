@@ -30,8 +30,8 @@
     cursor: pointer;
 }
 
-.app__navbar-links li:hover {
-    color: var(--color-gray);
+.app__navbar-links a:hover {
+    color: var(--color-grey);
 }
 
 .app__navbar-login {
