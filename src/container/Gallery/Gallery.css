@@ -19,7 +19,7 @@
     margin-top: 1rem;
 }
 
-.app__galler-images {
+.app__gallery-images {
     flex: 1;
     display: flex;
     flex-direction: row;
@@ -110,7 +110,7 @@
     .app__gallery {
         flex-direction: column;
     }
-    .app__galler-images {
+    .app__gallery-images {
         max-width: 100%;
         margin: 5rem 0;
     }

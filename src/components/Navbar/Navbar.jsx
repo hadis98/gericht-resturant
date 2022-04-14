@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 
@@ -13,28 +13,20 @@ const Navbar = () => {
         <img src={images.gericht} alt="logo" />
       </div>
       <ul className="app__navbar-links">
-        <li className="p__opensans">
-          <a href="#home">Home</a>
-        </li>
-        <li className="p__opensans">
-          <a href="#about">About</a>
-        </li>
-        <li className="p__opensans">
-          <a href="#menu">Menu</a>
-        </li>
-        <li className="p__opensans">
-          <a href="#awards">Awards</a>
-        </li>
-        <li className="p__opensans">
-          <a href="#contact">Contact</a>
-        </li>
+        {["home", "about", "menu", "awards", "contact"].map((item) => (
+          <li className="p__opensans" key={item}>
+            <a href={`#${item}`}>
+              {item}
+            </a>
+          </li>
+        ))}
       </ul>
       <div className="app__navbar-login">
         <a href="#login" className="p__opensans">
           Log In / Register
         </a>
         <div />
-        <a href="/" className="p__opensans">
+        <a href="#book" className="p__opensans">
           Book Table
         </a>
       </div>
@@ -53,21 +45,13 @@ const Navbar = () => {
               onClick={() => setToggleMenu(false)}
             />
             <ul className="app__navbar-smallscreen-links">
-              <li className="p__opensans">
-                <a href="#home">Home</a>
-              </li>
-              <li className="p__opensans">
-                <a href="#about">About</a>
-              </li>
-              <li className="p__opensans">
-                <a href="#menu">Menu</a>
-              </li>
-              <li className="p__opensans">
-                <a href="#awards">Awards</a>
-              </li>
-              <li className="p__opensans">
-                <a href="#contact">Contact</a>
-              </li>
+              {["home", "about", "menu", "awards", "contact"].map((item) => (
+                <li className="p__opensans" key={item}>
+                  <a href={`#${item}`} onClick={() => setToggleMenu(false)}>
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         )}
