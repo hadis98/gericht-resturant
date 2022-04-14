@@ -1,5 +1,5 @@
 import React from "react";
-import { FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
+import { FiFacebook, FiTwitter, FiInstagram, FiGithub } from "react-icons/fi";
 
 import { FooterOverlay, Newsletter } from "../../components";
 import { images } from "../../constants";
@@ -25,7 +25,7 @@ const Footer = () => (
         <img src={images.spoon} alt="spoon" style={{ marginTop: "15px" }} />
         <div className="app__footer-links_icons">
           <FiFacebook />
-          <FiTwitter  />
+          <FiTwitter />
           <FiInstagram />
         </div>
       </div>
@@ -39,6 +39,16 @@ const Footer = () => (
     </div>
     <div className="footer__copyright">
       <p className="p__opensans">2021 Gerícht. All Rights reserved.</p>
+      <div className="app__footer-hadis_sign">
+        <p>Created by Hadis Ghafouri</p>
+        <a
+          href="https://github.com/hadis98/gericht-resturant"
+          target="_blank"
+          className="app__footer-hadis_github"
+        >
+          <FiGithub />
+        </a>
+      </div>
     </div>
   </div>
 );

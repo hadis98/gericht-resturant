@@ -62,7 +62,25 @@
 }
 
 .footer__copyright {
+    color: var(--color-golden);
     margin-top: 3rem;
+    text-align: center;
+}
+
+.app__footer-hadis_sign {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.app__footer-hadis_github svg {
+    color: var(--color-golden);
+    cursor: pointer;
+    font-size: 35px;
+}
+
+.app__footer-hadis_github:hover svg {
+    color: var(--color-white);
 }
 
 @media screen and (min-width: 2000px) {
